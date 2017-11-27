@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mcr-3Y-YcO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Obo-6p-3OI">
+            <objects>
+                <navigationController id="mcr-3Y-YcO" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kXP-UB-RqT">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="MfA-HB-pgO" kind="relationship" relationship="rootViewController" id="biY-mb-W1U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZNC-Cd-gwA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-705" y="107"/>
+        </scene>
+        <!--Custom Keyboard-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomKeyboardDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fu-Jp-j9E">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="系统键盘" id="YJq-rv-DHG">
+                                        <color key="tintColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="textKeyboardAction:" destination="BYZ-38-t0r" id="ANZ-iE-t0I"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Nwa-bk-3RJ"/>
+                                    <barButtonItem title="自定义键盘" id="07d-4d-mgb">
+                                        <color key="tintColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="emojiKeyboardAction:" destination="BYZ-38-t0r" id="FgF-n4-ABE"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Ov8-8N-Z81"/>
+                                    <barButtonItem title="发送内容" id="o6c-mr-dgj">
+                                        <color key="tintColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="sendAction:" destination="BYZ-38-t0r" id="Lk8-7O-pUY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Here you can test the custom keyboard.." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EbA-Jr-9f0">
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4fu-Jp-j9E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0u4-0S-hCr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EbA-Jr-9f0" secondAttribute="bottom" id="5VJ-TS-4su"/>
+                            <constraint firstItem="EbA-Jr-9f0" firstAttribute="top" secondItem="4fu-Jp-j9E" secondAttribute="bottom" id="E5g-Wk-rgG"/>
+                            <constraint firstItem="4fu-Jp-j9E" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="HAX-MI-4Si"/>
+                            <constraint firstItem="4fu-Jp-j9E" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Rd2-0D-Ah7"/>
+                            <constraint firstItem="EbA-Jr-9f0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="i3u-0h-kfr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EbA-Jr-9f0" secondAttribute="trailing" id="iaX-xT-dg3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Custom Keyboard" id="PQ6-dD-rpT"/>
+                    <connections>
+                        <outlet property="customTextView" destination="EbA-Jr-9f0" id="eQa-Cx-ADN"/>
+                        <outlet property="toolBar" destination="4fu-Jp-j9E" id="PMp-tL-uVp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="865" y="-430"/>
+        </scene>
+        <!--Demo-->
+        <scene sceneID="nh5-k6-ekW">
+            <objects>
+                <tableViewController id="MfA-HB-pgO" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="Dr1-Y5-vSS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.94892948870000005" green="0.94908481840000003" blue="0.94889634850000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="Mvz-1W-yY3">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="157"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Keyboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5C-kk-9ci">
+                                    <rect key="frame" x="83" y="62" width="209" height="33"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                    <color key="textColor" red="0.40784313729999999" green="0.40784313729999999" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="j5C-kk-9ci" firstAttribute="centerX" secondItem="Mvz-1W-yY3" secondAttribute="centerX" id="KCw-dZ-YXO"/>
+                                <constraint firstItem="j5C-kk-9ci" firstAttribute="centerY" secondItem="Mvz-1W-yY3" secondAttribute="centerY" id="zmv-Jj-n9I"/>
+                            </constraints>
+                        </view>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="rby-X8-bha">
+                            <rect key="frame" x="0.0" y="277" width="375" height="164"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                        <sections>
+                            <tableViewSection id="eON-Xg-vN7">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="nHR-Fl-WlO" detailTextLabel="PAX-dk-pLl" style="IBUITableViewCellStyleSubtitle" id="PIc-gy-Qwy">
+                                        <rect key="frame" x="0.0" y="157" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PIc-gy-Qwy" id="WYr-Lq-88L">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="自定义键盘" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nHR-Fl-WlO">
+                                                    <rect key="frame" x="16" y="10" width="87" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Custom Keyboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PAX-dk-pLl">
+                                                    <rect key="frame" x="16" y="33.5" width="101" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="push" id="Gob-Pi-2M1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="aAd-gf-jM7" detailTextLabel="ofk-bT-Oka" style="IBUITableViewCellStyleSubtitle" id="AQE-iB-7cD">
+                                        <rect key="frame" x="0.0" y="217" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AQE-iB-7cD" id="yIm-3R-jz9">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Emoji 键盘" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aAd-gf-jM7">
+                                                    <rect key="frame" x="16" y="10" width="80.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Emoji Keyboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ofk-bT-Oka">
+                                                    <rect key="frame" x="16" y="33.5" width="88" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Kdy-oP-iEk" kind="push" id="dVC-qP-RbI"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Demo" id="bBQ-KM-z4l"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gOr-N3-uIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="76" y="107"/>
+        </scene>
+        <!--Emoji Keyboard-->
+        <scene sceneID="XB1-x2-M7c">
+            <objects>
+                <viewController id="Kdy-oP-iEk" customClass="EmojiTextViewController" customModule="CustomKeyboardDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JYe-PV-9lv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z2x-YW-qx7">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="系统键盘" id="l0K-XZ-Al5">
+                                        <color key="tintColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="textKeyboardAction:" destination="Kdy-oP-iEk" id="dVg-qV-Ngn"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="eyV-Gj-Rcy"/>
+                                    <barButtonItem title="Emoji 键盘" id="xSF-w0-aw9">
+                                        <color key="tintColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="emojiKeyboardAction:" destination="Kdy-oP-iEk" id="RCY-Ac-DP8"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="1XH-IY-PBa"/>
+                                    <barButtonItem title="发送内容" id="fz4-0D-KgG">
+                                        <color key="tintColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="sendAction:" destination="Kdy-oP-iEk" id="Kym-id-0Lt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Here you can test the custom keyboard.." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3BU-MT-6We">
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Yky-An-fod" firstAttribute="bottom" secondItem="3BU-MT-6We" secondAttribute="bottom" id="1YC-aH-xIB"/>
+                            <constraint firstItem="Z2x-YW-qx7" firstAttribute="top" secondItem="JYe-PV-9lv" secondAttribute="top" constant="64" id="jlD-7A-lff"/>
+                            <constraint firstItem="Z2x-YW-qx7" firstAttribute="leading" secondItem="Yky-An-fod" secondAttribute="leading" id="m0y-hS-qlB"/>
+                            <constraint firstItem="Z2x-YW-qx7" firstAttribute="trailing" secondItem="Yky-An-fod" secondAttribute="trailing" id="r5S-ia-vVO"/>
+                            <constraint firstItem="3BU-MT-6We" firstAttribute="leading" secondItem="Yky-An-fod" secondAttribute="leading" id="ttH-Ks-Reh"/>
+                            <constraint firstItem="Yky-An-fod" firstAttribute="trailing" secondItem="3BU-MT-6We" secondAttribute="trailing" id="xUw-BF-XAM"/>
+                            <constraint firstItem="3BU-MT-6We" firstAttribute="top" secondItem="Z2x-YW-qx7" secondAttribute="bottom" id="xhV-nX-Chw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Yky-An-fod"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Emoji Keyboard" id="UO8-Am-Ufb"/>
+                    <connections>
+                        <outlet property="customTextView" destination="3BU-MT-6We" id="bTY-ip-rQF"/>
+                        <outlet property="toolBar" destination="Z2x-YW-qx7" id="6yB-de-HGt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Duy-nv-2XL" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="865" y="349"/>
+        </scene>
+    </scenes>
+</document>

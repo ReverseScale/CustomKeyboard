@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>mygirls</key>
+	<array>
+		<string>初恋</string>
+		<string>前任</string>
+		<string>再前任</string>
+		<string>幼儿园小盆友</string>
+		<string>小学同桌</string>
+		<string>初中好友</string>
+		<string>高中同学</string>
+		<string>大学室友</string>
+		<string>小学校花</string>
+		<string>初中校花</string>
+		<string>高中班花</string>
+		<string>高中校花</string>
+		<string>大学系花</string>
+		<string>同事A</string>
+		<string>同事B</string>
+	</array>
+</dict>
+</plist>
