@@ -26,20 +26,36 @@
 
 
 ## Usage 使用方法
-### 第一步 引入头文件
+### 第一步 声明方法
 ```
-#import "OrderDic.h"
+    //懒加载emoji表情控制器
+    private lazy var emojiVC:EmojiViewController = EmojiViewController.init { [weak self](emojiData) in
+        //self.customTextView.selectedTextRange! 光标所在位置
+        //输入回调,之后替换
+        self!.customTextView.replace(self!.customTextView.selectedTextRange!, withText: emojiData)
+        }!
+    //懒加载gilrs控制器
+    private lazy var gilrsVC:GirlsViewController = GirlsViewController.init { [weak self](gilrsData) in
+        self!.customTextView.replace(self!.customTextView.selectedTextRange!, withText: gilrsData)
+        }!
+    
 ```
-### 第二步 简单调用
+### 第二步 调用切换
 ```
-[OrderDic order:dic]
+        //1.关闭键盘
+        customTextView.resignFirstResponder()
+        //2.唤起自定义键盘
+//        customTextView.inputView = emojiVC.view
+        customTextView.inputView = gilrsVC.view
+        //唤起键盘
+        customTextView.becomeFirstResponder()
 ```
 
 使用简单、效率高效、进程安全~~~如果你有更好的建议,希望不吝赐教!
 
 
 ## License 许可证
-OrderedDictionaryTools 使用 MIT 许可证，详情见 LICENSE 文件。
+CustomKeyboard 使用 MIT 许可证，详情见 LICENSE 文件。
 
 
 ## Contact 联系方式:
